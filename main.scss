@@ -1,0 +1,62 @@
+@import "mixin.scss";    
+@import "var.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// SASS Operators:  // using operator like (5rem + 5rem)
+// SASS Variables:  // using variable to store color value
+// SASS Nesting:
+// SASS Mixin and Include:    // Creating mixin to make css property re-usable
+// Parameters
+// Partials
+// Extends          // this is another way of reusing things that we have written
+                      
+// **********************************************************************************************************************************************************************************************************************
+
+.main_header {          // here h1 and p tag are nested inside main_header class.
+    
+    @include flexProperty;  // Using mixin to make use of variable predefined with css property.
+    width: 100vw;
+    height: 100vh;
+    background: $bg-color;
+
+    h1 {
+        @include textProperty(0.8rem, uppercase);      // Using mixin
+        &:hover {                 // we can use & for selecting parent element  
+            color: #c8d6e5;
+        }
+        &::after {
+            content: " SCSS";
+        }
+    }
+
+    p{
+        @include textProperty(0.3rem, capitalize);      // Using mixin and passing value to the parameter.
+        &:hover {
+            color: #c8d6e5;
+        }
+    }
+}
+
+.warn {
+    color: red;
+    font-size: medium;
+}
+
+.error {
+    @extend .warn;       // .error will also have same property as .warn
+    background-color: lighten($color: #000000, $amount: 40%);
+    font-size: 1.2rem;
+
+}
+
+.criticalError {        // .criticalError will also have same property as .warn and .error
+    @extend .error;
+    border-top: 2px solid cornflowerblue;
+    font-size: 2rem;
+
+}

@@ -1,0 +1,24 @@
+// underscore(_) is must for SASS partial file. as we are going to import it wherever required. and underscore(_) tells sass and scss compiler to leave this file during compiling.
+
+// SASS Operators:
+// SASS Variables:
+// SASS Nesting:
+// SASS Mixin and Include
+// Parameters
+// Partials
+
+@mixin flexProperty {      // Creating mixin to make css property re-usable
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+// We can also pass parameter inside mixin
+
+@mixin textProperty($param1, $param2) {        // Creating mixin to make css property re-usable
+    color: #222f3e;
+    font-size: 10rem - 5rem;  // using operator like (5rem + 5rem)
+    letter-spacing: $param1;
+    text-transform: $param2;
+}

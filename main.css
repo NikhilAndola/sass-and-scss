@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.main_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background: #10ac84;
+}
+
+.main_header h1 {
+  color: #222f3e;
+  font-size: 5rem;
+  letter-spacing: 0.8rem;
+  text-transform: uppercase;
+}
+
+.main_header h1:hover {
+  color: #c8d6e5;
+}
+
+.main_header h1::after {
+  content: " SCSS";
+}
+
+.main_header p {
+  color: #222f3e;
+  font-size: 5rem;
+  letter-spacing: 0.3rem;
+  text-transform: capitalize;
+}
+
+.main_header p:hover {
+  color: #c8d6e5;
+}
+
+.warn, .error, .criticalError {
+  color: red;
+  font-size: medium;
+}
+
+.error, .criticalError {
+  background-color: #666666;
+  font-size: 1.2rem;
+}
+
+.criticalError {
+  border-top: 2px solid cornflowerblue;
+  font-size: 2rem;
+}
+/*# sourceMappingURL=main.css.map */
